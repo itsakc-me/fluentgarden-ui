@@ -121,4 +121,4 @@ const SnackbarSonner = (props: React.ComponentPropsWithoutRef<typeof Sonner>) =>
 }
 SnackbarSonner.displayName = "SnackbarSonner"
 
-export { Snackbar, SnackbarSonner, type SnackbarProps }
+export { Snackbar, SnackbarSonner as Sonner, type SnackbarProps }

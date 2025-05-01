@@ -1,11 +1,11 @@
 {
   "name": "fluentgarden-ui",
   "private": false,
-  "version": "1.0.1-master",
+  "version": "1.0.1-release",
   "packageManager": "pnpm@8.4.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/itsakc/fluentgarden-ui"
+    "url": "https://github.com/itsakc-me/fluentgarden-ui"
   },
   "main": "./dist/fluentgarden-ui.umd.js",
   "module": "./dist/fluentgarden-ui.es.js",
