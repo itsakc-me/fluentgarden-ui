@@ -1,7 +1,7 @@
 {
   "name": "fluentgarden-ui",
   "private": false,
-  "version": "1.0.1-release",
+  "version": "1.2.0",
   "packageManager": "pnpm@8.4.0",
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "@testing-library/react": "14.0.0",
     "@types/node": "20.4.9",
     "@types/react": "18.3.3",
+    "@types/react-color": "^3.0.13",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "5.60.0",
     "@vitejs/plugin-react": "4.0.4",
@@ -120,6 +121,7 @@
     "lucide-react": "0.462.0",
     "next-themes": "0.3.0",
     "react": "^18.3.1",
+    "react-color": "^2.19.3",
     "react-day-picker": "8.10.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "7.53.0",

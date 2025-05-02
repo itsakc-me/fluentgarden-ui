@@ -89,7 +89,7 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
     <div
       ref={controlRef}
       className={cn(
-        "inline-flex relative rounded-lg p-1 text-muted-foreground",
+        "inline-flex gap-2 relative rounded-lg p-1 text-muted-foreground",
         sizeClasses[size],
         variantClasses[variant],
         fullWidth && "w-full",
@@ -112,7 +112,7 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
           onClick={() => handleOptionClick(option.value)}
           data-selected={selectedValue === option.value}
           className={cn(
-            "relative z-10 rounded-md font-medium transition-colors",
+            "relative z-10 rounded-md font-medium transition-colors py-1 px-3",
             "data-[selected=true]:font-medium",
             fullWidth && "flex-1 text-center"
           )}
