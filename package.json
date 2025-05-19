@@ -1,29 +1,355 @@
 {
   "name": "fluentgarden-ui",
+  "description": "Modern React component library with Fluent Design principles and utility-first approach",
   "private": false,
-  "version": "1.2.1",
+  "version": "1.3.2",
   "packageManager": "pnpm@8.4.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/itsakc-me/fluentgarden-ui"
-  },
   "main": "./dist/fluentgarden-ui.umd.js",
   "module": "./dist/fluentgarden-ui.es.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**",
+    "README.md",
+    "DOCUMENTATION.md",
+    "LICENSE"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/fluentgarden-ui.es.js",
       "require": "./dist/fluentgarden-ui.umd.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./css": "./dist/style.css",
+    "./accordion": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/accordion/index.d.ts"
+    },
+    "./alert": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/alert/index.d.ts"
+    },
+    "./alert-dialog": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/alert-dialog/index.d.ts"
+    },
+    "./aspect-ratio": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/aspect-ratio/index.d.ts"
+    },
+    "./avatar": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/avatar/index.d.ts"
+    },
+    "./badge": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/badge/index.d.ts"
+    },
+    "./bottom-navigation": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/bottom-navigation/index.d.ts"
+    },
+    "./breadcrumb": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/breadcrumb/index.d.ts"
+    },
+    "./button": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/button/index.d.ts"
+    },
+    "./calendar": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/calendar/index.d.ts"
+    },
+    "./card": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/card/index.d.ts"
+    },
+    "./carousel": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/carousel/index.d.ts"
+    },
+    "./chart": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/chart/index.d.ts"
+    },
+    "./checkbox": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/checkbox/index.d.ts"
+    },
+    "./chip": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/chip/index.d.ts"
+    },
+    "./collapsible": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/collapsible/index.d.ts"
+    },
+    "./color-picker": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/color-picker/index.d.ts"
+    },
+    "./command": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/command/index.d.ts"
+    },
+    "./context-menu": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/context-menu/index.d.ts"
+    },
+    "./date-picker": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/date-picker/index.d.ts"
+    },
+    "./date-range-picker": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/date-range-picker/index.d.ts"
+    },
+    "./dialog": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/dialog/index.d.ts"
+    },
+    "./drawer": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/drawer/index.d.ts"
+    },
+    "./dropdown-menu": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/dropdown-menu/index.d.ts"
+    },
+    "./file-uploader": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/file-uploader/index.d.ts"
+    },
+    "./form": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/form/index.d.ts"
+    },
+    "./hover-card": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/hover-card/index.d.ts"
+    },
+    "./input": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/input/index.d.ts"
+    },
+    "./input-otp": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/input-otp/index.d.ts"
+    },
+    "./label": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/label/index.d.ts"
+    },
+    "./material-card": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/material-card/index.d.ts"
+    },
+    "./menubar": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/menubar/index.d.ts"
+    },
+    "./navigation-menu": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/navigation-menu/index.d.ts"
+    },
+    "./pagination": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/pagination/index.d.ts"
+    },
+    "./popover": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/popover/index.d.ts"
+    },
+    "./progress": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/progress/index.d.ts"
+    },
+    "./radio-group": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/radio-group/index.d.ts"
+    },
+    "./resizable": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/resizable/index.d.ts"
+    },
+    "./scroll-area": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/scroll-area/index.d.ts"
+    },
+    "./search-bar": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/search-bar/index.d.ts"
+    },
+    "./segmented-control": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/segmented-control/index.d.ts"
+    },
+    "./select": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/select/index.d.ts"
+    },
+    "./separator": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/separator/index.d.ts"
+    },
+    "./sheet": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/sheet/index.d.ts"
+    },
+    "./sidebar": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/sidebar/index.d.ts"
+    },
+    "./skeleton": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/skeleton/index.d.ts"
+    },
+    "./slider": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/slider/index.d.ts"
+    },
+    "./sonner": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/sonner/index.d.ts"
+    },
+    "./switch": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/switch/index.d.ts"
+    },
+    "./table": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/table/index.d.ts"
+    },
+    "./tabs": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/tabs/index.d.ts"
+    },
+    "./textarea": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/textarea/index.d.ts"
+    },
+    "./time-picker": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/time-picker/index.d.ts"
+    },
+    "./timeline": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/timeline/index.d.ts"
+    },
+    "./toast": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/toast/index.d.ts"
+    },
+    "./toaster": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/toaster/index.d.ts"
+    },
+    "./toggle": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/toggle/index.d.ts"
+    },
+    "./toggle-group": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/toggle-group/index.d.ts"
+    },
+    "./tooltip": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/tooltip/index.d.ts"
+    },
+    "./tree-view": {
+      "import": "./dist/fluentgarden-ui.es.js",
+      "require": "./dist/fluentgarden-ui.umd.js",
+      "types": "./dist/components/tree-view/index.d.ts"
+    }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsakc-me/fluentgarden-ui.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "user-interface",
+    "fluent-design",
+    "design-system",
+    "tailwindcss",
+    "radix-ui",
+    "shadcn",
+    "typescript"
+  ],
+  "author": "itsakc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itsakc-me/fluentgarden-ui/issues"
+  },
+  "homepage": "https://github.com/itsakc-me/fluentgarden-ui#readme",
   "engines": {
     "node": "18"
   },
   "scripts": {
-    "dev": "storybook dev -p 6006",
-    "build": "storybook build",
+    "dev": "vite dev",
+    "build": "vite build",
     "build:lib": "tsc && vite build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix",
     "prettier": "prettier --write \"src/**/*.{ts,tsx,js,mdx}\"",
@@ -32,14 +358,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
-    "@storybook/addon-essentials": "7.2.2",
-    "@storybook/addon-interactions": "7.2.2",
-    "@storybook/addon-links": "7.2.2",
-    "@storybook/addon-styling": "1.3.6",
-    "@storybook/blocks": "7.2.2",
-    "@storybook/react": "7.2.2",
-    "@storybook/react-vite": "7.2.2",
-    "@storybook/testing-library": "0.2.0",
     "@tailwindcss/typography": "^0.5.15",
     "@testing-library/react": "14.0.0",
     "@types/node": "20.4.9",
@@ -62,21 +380,16 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "eslint-plugin-storybook": "0.6.13",
     "globals": "^15.9.0",
-    "husky": "8.0.3",
     "jsdom": "22.1.0",
     "lint-staged": "13.2.3",
     "postcss": "8.4.27",
     "prettier": "3.0.1",
-    "storybook": "7.2.2",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6",
     "vite": "4.4.9",
     "vite-plugin-dts": "3.5.1",
     "vitest": "0.34.1"
   },
-  "files": [
-    "dist"
-  ],
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css,md}": [
       "prettier -w"
